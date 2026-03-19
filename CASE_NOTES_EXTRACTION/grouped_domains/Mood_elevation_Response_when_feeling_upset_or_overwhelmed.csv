@@ -1,0 +1,7 @@
+EvidenceType,RelevanceTier,EvidenceText_Internal,Domain_13FV,Domain_Broad,Domain_Framework,QuestionID,Section,Question
+history,CORE,Currently seeing addiction counselling service for gambling issues,Response_when_feeling_upset_or_overwhelmed,Mood_elevation,PSY,Q01,Presenting Concerns & Goals,What brings you to seek help at this time?
+history,SUPPORTING,"Last year was involved in loan scam, helped transfer money to accounts",Response_when_feeling_upset_or_overwhelmed,Mood_elevation,PSY,Q04,Impulse Control & Coping,How do you respond when feeling upset or overwhelmed?
+mechanism,SUPPORTING,Perhaps gambling was one way,Response_when_feeling_upset_or_overwhelmed,Mood_elevation,PSY,Q04,Impulse Control & Coping,How do you respond when feeling upset or overwhelmed?
+mechanism,CORE,Made risky stock market investments fuelled by greed,Response_when_feeling_upset_or_overwhelmed,Mood_elevation,PSY,Q04,Impulse Control & Coping,How do you respond when feeling upset or overwhelmed?
+mechanism,CORE,Debt usually from stock market losses,Response_when_feeling_upset_or_overwhelmed,Mood_elevation,PSY,Q04,Impulse Control & Coping,How do you respond when feeling upset or overwhelmed?
+mechanism,CORE,"Thinks he cannot control his impulses, goes all in when buying stocks which is irrational on hindsight",Response_when_feeling_upset_or_overwhelmed,Mood_elevation,PSY,Q04,Impulse Control & Coping,How do you respond when feeling upset or overwhelmed?

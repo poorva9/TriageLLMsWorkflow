@@ -1,0 +1,378 @@
+TEST RUN — processing first 10 of 10 units
+Processing across 5 frameworks...
+
+
+============================================================
+[1/10]
+
+[EU_0001] 'Able to complete writing and submit to employers but self-sa...'
+  Stage 1: Decomposing...
+  Stage 2: Mapping all frameworks in parallel...
+    ✓ stipo
+    ✓ broad_domains
+    ✓ f13fv
+    ✓ bps_4p
+    ✓ snomed
+
+────────────────────────────────────────────────────────────
+  EU_0001: Able to complete writing and submit to employers but self-sabotaging mode remain
+────────────────────────────────────────────────────────────
+  [f13fv               ]  conf=0.91  ✓ agree
+    domains  : avoidance, self_worth, goals
+    rationale: Primary domain is 'avoidance' — the self-sabotaging pattern involves deliberate/compulsive late submission preventing em
+    flags    : ['chronic_pattern', 'functional_impairment', 'schema_mode_language']
+  [broad_domains       ]  conf=0.91  ✓ agree
+    domains  : goals_and_priorities, identity_and_self_view, thinking_and_attention
+    rationale: PRIMARY: goals_and_priorities - Core evidence of self-sabotaging behavior directly undermining vocational goals despite 
+    flags    : ['schema_mode_language', 'maintaining_mechanism', 'competence_performance_gap']
+  [bps_4p              ]  conf=0.91  ✓ agree
+    domains  : perpetuating_psychological, precipitating_psychological, protective_psychological
+    rationale: PRIMARY: perpetuating_psychological - This evidence unit describes a core maintaining mechanism: the 'self-sabotaging mo
+    flags    : ['core_mechanism', 'schema_mode_indicator', 'paradoxical_pattern']
+  [stipo               ]  conf=0.82  ✓ agree
+    domains  : identity, coping_and_rigidity
+    rationale: Primary mapping to 'identity': The self-sabotaging pattern demonstrates instability in investing successfully in work de
+    flags    : ['high_confidence_primary_domain']
+  [snomed              ]  conf=0.82  ✓ agree
+    domains  : drive, mental_defense_mechanisms, negative_automatic_thoughts
+    rationale: DRIVE (247750002): The evidence shows impaired volition, self-control, and purposeful action — patient has capability an
+    flags    : ['schema_mode_language_present', 'approach_avoidance_conflict', 'competence_performance_gap']
+
+============================================================
+[2/10]
+
+[EU_0002] 'Psychodynamic therapy session patient came on time...'
+  Stage 1: Decomposing...
+  Stage 2: Mapping all frameworks in parallel...
+    ✓ broad_domains
+    ✓ f13fv
+    ✓ stipo
+    ✓ snomed
+    ✓ bps_4p
+    Disagreement on f13fv — reconciling...
+    Disagreement on broad_domains — reconciling...
+    Disagreement on snomed — reconciling...
+
+────────────────────────────────────────────────────────────
+  EU_0002: Psychodynamic therapy session patient came on time
+────────────────────────────────────────────────────────────
+  [f13fv               ]  conf=0.00  △ reconciled
+    domains  : — none —
+    rationale: While punctuality may reflect engagement with the therapeutic process, it is fundamentally a logistical observation abou
+    flags    : ['not_applicable', 'minimal_clinical_depth']
+    recon    : Model A mapped to 'readiness_for_therapy' based on punctuality as a marker of engagement, while Model B correctly identi
+  [broad_domains       ]  conf=0.00  △ reconciled
+    domains  : — none —
+    rationale: This evidence unit documents only an administrative observation (patient punctuality) without substantive clinical conte
+    flags    : ['not_applicable', 'metadata_only']
+    recon    : Model B interpreted punctuality as evidence of stability and therapeutic alliance strength, warranting mapping to safety
+  [bps_4p              ]  conf=0.68  ✓ agree
+    domains  : protective_psychological, protective_social
+    rationale: Punctuality to a psychodynamic therapy session demonstrates therapeutic engagement, organizational capacity, and respect
+    flags    : ['requires_longitudinal_context', 'limited_clinical_depth']
+  [stipo               ]  conf=0.45  ✓ agree
+    domains  : quality_of_object_relations
+    rationale: Punctuality to therapy sessions may reflect capacity for commitment in relationships and respect for relational boundari
+    flags    : ['minimal_clinical_depth', 'requires_longitudinal_context', 'low_specificity']
+  [snomed              ]  conf=0.00  △ reconciled
+    domains  : — none —
+    rationale: This evidence unit documents administrative/process information about session attendance and punctuality without substan
+    flags    : ['not_applicable', 'administrative_only', 'requires_context_for_clinical_meaning']
+    recon    : Both models reached full consensus on empty domains and zero confidence. Model A provided more comprehensive clinical re
+
+============================================================
+[3/10]
+
+[EU_0003] 'Currently in his final year of university accounting course...'
+  Stage 1: Decomposing...
+  Stage 2: Mapping all frameworks in parallel...
+    ✓ f13fv
+    ✓ stipo
+    ✓ snomed
+    ✓ broad_domains
+    ✓ bps_4p
+    Disagreement on snomed — reconciling...
+
+────────────────────────────────────────────────────────────
+  EU_0003: Currently in his final year of university accounting course
+────────────────────────────────────────────────────────────
+  [f13fv               ]  conf=0.72  ✓ agree
+    domains  : goals
+    rationale: Evidence demonstrates sustained engagement in long-term educational goal pursuit, with progression to final year indicat
+    flags    : ['protective_factor', 'functioning_preserved']
+  [broad_domains       ]  conf=0.78  ✓ agree
+    domains  : goals_and_priorities
+    rationale: The evidence unit indicates sustained engagement in a multi-year educational goal with progression to final year, demons
+    flags    : ['positive_functioning_indicator', 'developmental_context', 'requires_integration_with_other_domains']
+  [bps_4p              ]  conf=0.78  ✓ agree
+    domains  : protective_psychological, protective_social
+    rationale: Being in final year of university demonstrates sustained goal-directed behaviour, cognitive capacity for complex learnin
+    flags    : ['context_dependent', 'needs_integration_with_presenting_problem']
+  [stipo               ]  conf=0.68  ✓ agree
+    domains  : identity
+    rationale: The evidence unit demonstrates capacity to invest in work/educational pursuits and suggests goal-directed behaviour towa
+    flags    : ['limited_scope', 'context_dependent']
+  [snomed              ]  conf=0.00  △ reconciled
+    domains  : — none —
+    rationale: This evidence unit describes current educational status (final year university accounting student) without any clinical 
+
+============================================================
+[4/10]
+
+[EU_0004] 'Willing to continue therapy due to cost coverage and persona...'
+  Stage 1: Decomposing...
+  Stage 2: Mapping all frameworks in parallel...
+    ✓ stipo
+    ✓ snomed
+    ✓ f13fv
+    ✓ broad_domains
+    ✓ bps_4p
+    Disagreement on stipo — reconciling...
+
+────────────────────────────────────────────────────────────
+  EU_0004: Willing to continue therapy due to cost coverage and personal interest in psycho
+────────────────────────────────────────────────────────────
+  [f13fv               ]  conf=0.91  ✓ agree
+    domains  : readiness_for_therapy
+    rationale: The evidence unit directly addresses the client's willingness to continue therapy, motivated by both pragmatic factors (
+    flags    : ['protective_factor']
+  [broad_domains       ]  conf=0.78  ✓ agree
+    domains  : goals_and_priorities
+    rationale: This evidence unit reflects treatment engagement, motivation, and commitment to the therapeutic process. The client's wi
+    flags    : ['treatment_process_indicator', 'primarily_engagement_factor']
+  [bps_4p              ]  conf=0.85  ✓ agree
+    domains  : protective_psychological, protective_social
+    rationale: This evidence unit reflects two protective dimensions: (1) Psychological - intrinsic motivation via 'personal interest i
+    flags    : ['treatment_engagement_indicator', 'mixed_intrinsic_extrinsic_motivation']
+  [stipo               ]  conf=0.40  △ reconciled
+    domains  : identity
+    rationale: The willingness to continue therapy reflects both practical considerations (cost coverage) and intrinsic motivation (per
+    flags    : ['limited_po_information', 'primarily_treatment_process']
+    recon    : Models disagreed on primary domain (identity vs. coping_and_rigidity). Selected identity as marginally better supported 
+  [snomed              ]  conf=0.78  ✓ agree
+    domains  : drive
+    rationale: The evidence unit describes motivation, willingness, and interest—core components of drive (247750002). The client demon
+    flags    : ['treatment_engagement_context', 'protective_factor']
+
+============================================================
+[5/10]
+
+[EU_0005] 'Patient restarted acapella practice, suggested team practice...'
+  Stage 1: Decomposing...
+  Stage 2: Mapping all frameworks in parallel...
+    ✓ broad_domains
+    ✓ snomed
+    ✓ f13fv
+    ✓ stipo
+    ✓ bps_4p
+
+────────────────────────────────────────────────────────────
+  EU_0005: Patient restarted acapella practice, suggested team practice at home, feels good
+────────────────────────────────────────────────────────────
+  [f13fv               ]  conf=0.82  ✓ agree
+    domains  : mood, goals, relationships
+    rationale: The evidence demonstrates behavioral activation and positive affect from re-engaging with singing (acapella practice), s
+    flags    : ['protective_factor', 'behavioral_activation']
+  [broad_domains       ]  conf=0.88  ✓ agree
+    domains  : goals_and_priorities, relationships_and_support, meaning_and_values
+    rationale: PRIMARY: goals_and_priorities — Patient is actively working towards a valued goal (acapella practice), demonstrating eff
+  [bps_4p              ]  conf=0.88  ✓ agree
+    domains  : protective_psychological, protective_social
+    rationale: This evidence unit demonstrates clear protective psychological factors: spontaneous behavioural activation (restarting a
+    flags    : ['spontaneous_behavioural_activation', 'preserved_capacity_for_pleasure', 'social_reconnection_potential']
+  [stipo               ]  conf=0.73  ✓ agree
+    domains  : identity, coping_and_rigidity
+    rationale: This evidence unit demonstrates capacity to invest in leisure activity (singing/acapella practice) which directly relate
+    flags    : ['limited_context']
+  [snomed              ]  conf=0.82  ✓ agree
+    domains  : emotion, drive
+    rationale: The evidence unit describes observable positive emotional response ('feels good') and behavioral initiative/motivation (
+
+============================================================
+[6/10]
+
+[EU_0006] 'Patient agreeable to resume working on therapy goal to reduc...'
+  Stage 1: Decomposing...
+  Stage 2: Mapping all frameworks in parallel...
+    ✓ stipo
+    ✓ broad_domains
+    ✓ snomed
+    ✓ bps_4p
+    ✓ f13fv
+    Disagreement on stipo — reconciling...
+
+────────────────────────────────────────────────────────────
+  EU_0006: Patient agreeable to resume working on therapy goal to reduce tics, now that moo
+────────────────────────────────────────────────────────────
+  [f13fv               ]  conf=0.78  ✓ agree
+    domains  : mood, readiness_for_therapy
+    rationale: The evidence unit indicates mood has been sufficiently stabilized ('more or less stabilised') to allow resumption of the
+    flags    : ['partial_symptom_coverage']
+  [broad_domains       ]  conf=0.88  ✓ agree
+    domains  : goals_and_priorities, mood_elevation
+    rationale: Primary mapping to 'goals_and_priorities' reflects the explicit therapeutic focus on resuming work toward a specific tre
+    flags    : ['treatment_transition_point', 'residual_mood_symptoms_possible']
+  [bps_4p              ]  conf=0.78  ✓ agree
+    domains  : protective_psychological, perpetuating_biological, protective_social
+    rationale: This evidence unit primarily reflects protective psychological factors: treatment engagement, collaborative stance, read
+    flags    : ['treatment_phase_marker', 'residual_symptoms_possible']
+  [stipo               ]  conf=0.00  △ reconciled
+    domains  : — none —
+    rationale: This evidence unit describes treatment engagement and symptom-focused intervention planning (tics and mood), not the str
+    recon    : Model B interpreted treatment goal resumption as evidence of coping flexibility, but this confounds treatment engagement
+  [snomed              ]  conf=0.78  ✓ agree
+    domains  : drive, emotion
+    rationale: The evidence unit describes the patient's readiness and willingness to resume therapy work (treatment engagement, collab
+
+============================================================
+[7/10]
+
+[EU_0007] 'Patient expressed interest in understanding session costs...'
+  Stage 1: Decomposing...
+  Stage 2: Mapping all frameworks in parallel...
+    ✓ broad_domains
+    ✓ stipo
+    ✓ f13fv
+    ✓ snomed
+    ✓ bps_4p
+    Disagreement on f13fv — reconciling...
+    Disagreement on broad_domains — reconciling...
+    Disagreement on stipo — reconciling...
+    Disagreement on snomed — reconciling...
+
+────────────────────────────────────────────────────────────
+  EU_0007: Patient expressed interest in understanding session costs
+────────────────────────────────────────────────────────────
+  [f13fv               ]  conf=0.00  △ reconciled
+    domains  : — none —
+    rationale: This evidence unit addresses purely administrative content concerning financial transparency and session costs. It conta
+    flags    : ['not_applicable', 'METADATA_ONLY']
+  [broad_domains       ]  conf=0.00  △ reconciled
+    domains  : — none —
+    rationale: This evidence unit concerns administrative/logistical information about session costs with no direct clinical content. W
+    flags    : ['not_applicable', 'administrative_only']
+  [bps_4p              ]  conf=0.47  ✓ agree
+    domains  : protective_psychological, protective_social
+    rationale: This evidence unit reflects proactive engagement and practical problem-solving behaviour (protective_psychological), sho
+    flags    : ['low_clinical_salience', 'ambiguous_context', 'requires_clarification']
+  [stipo               ]  conf=0.00  △ reconciled
+    domains  : — none —
+    rationale: This evidence unit describes a practical, administrative inquiry about session costs. It reflects normative information-
+  [snomed              ]  conf=0.00  △ reconciled
+    domains  : — none —
+    rationale: Both models correctly identified that this evidence unit describes administrative/logistical content regarding session c
+    flags    : ['not_applicable', 'METADATA_ONLY']
+
+============================================================
+[8/10]
+
+[EU_0008] 'Perpetuating factors: No goals in life, family financial dif...'
+  Stage 1: Decomposing...
+  Stage 2: Mapping all frameworks in parallel...
+    ✓ bps_4p
+    ✓ f13fv
+    ✓ broad_domains
+    ✓ stipo
+    ✓ snomed
+
+────────────────────────────────────────────────────────────
+  EU_0008: Perpetuating factors: No goals in life, family financial difficulties, family re
+────────────────────────────────────────────────────────────
+  [f13fv               ]  conf=0.88  ✓ agree
+    domains  : goals, stress, relationships
+    rationale: The evidence unit directly identifies 'no goals in life' which maps precisely to the 'goals' domain (capacity for motiva
+    flags    : ['formulation_level_content', 'chronic_perpetuating_cycle', 'family_system_involvement']
+  [broad_domains       ]  conf=0.85  ✓ agree
+    domains  : goals_and_priorities, safety_and_stability, relationships_and_support
+    rationale: Primary mapping to 'goals_and_priorities' given explicit statement 'No goals in life' indicating lack of direction and v
+    flags    : ['multiple_interacting_domains', 'formulation_level_content']
+  [bps_4p              ]  conf=0.91  ✓ agree
+    domains  : perpetuating_psychological, perpetuating_social
+    rationale: All three factors are explicitly identified as perpetuating. 'No goals in life' maps to perpetuating_psychological (lack
+    flags    : ['high_clinical_priority', 'intervention_target']
+  [stipo               ]  conf=0.73  ✓ agree
+    domains  : identity, quality_of_object_relations
+    rationale: The absence of life goals and lack of direction directly reflects disturbance in identity domain—specifically impaired c
+    flags    : ['limited_specificity', 'state_vs_trait_ambiguous']
+  [snomed              ]  conf=0.78  ✓ agree
+    domains  : drive, emotion
+    rationale: The evidence unit describes perpetuating factors including 'no goals in life' (lack of purpose, motivation, volition — c
+    flags    : ['formulation_content', 'perpetuating_factors_focus']
+
+============================================================
+[9/10]
+
+[EU_0009] 'Patient prefers email contact to arrange calls due to phone ...'
+  Stage 1: Decomposing...
+  Stage 2: Mapping all frameworks in parallel...
+    ✓ broad_domains
+    ✓ stipo
+    ✓ snomed
+    ✓ bps_4p
+    ✓ f13fv
+    Disagreement on f13fv — reconciling...
+    Disagreement on broad_domains — reconciling...
+    Disagreement on bps_4p — reconciling...
+    Disagreement on stipo — reconciling...
+    Disagreement on snomed — reconciling...
+
+────────────────────────────────────────────────────────────
+  EU_0009: Patient prefers email contact to arrange calls due to phone settings
+────────────────────────────────────────────────────────────
+  [f13fv               ]  conf=0.00  △ reconciled
+    domains  : — none —
+    rationale: This evidence unit describes an administrative communication preference for scheduling purposes (email vs. phone contact
+    flags    : ['not_applicable', 'METADATA_ONLY']
+  [broad_domains       ]  conf=0.00  △ reconciled
+    domains  : — none —
+    rationale: Both models correctly identified this as administrative/logistical content with no clinical significance. The evidence d
+    flags    : ['not_applicable', 'administrative_only']
+  [bps_4p              ]  conf=0.00  △ reconciled
+    domains  : — none —
+    rationale: This evidence unit describes a logistical preference for communication modality driven by phone settings—a practical, ad
+    flags    : ['not_applicable', 'administrative_only']
+    recon    : Models disagreed on clinical significance. Model B interpreted logistical preference as protective psychological strengt
+  [stipo               ]  conf=0.00  △ reconciled
+    domains  : — none —
+    rationale: This evidence unit describes a logistical communication preference (email over phone) explicitly attributed to phone set
+  [snomed              ]  conf=0.00  △ reconciled
+    domains  : — none —
+    rationale: This evidence unit documents an administrative preference for email contact due to phone settings. Both models correctly
+    flags    : ['not_applicable', 'METADATA_ONLY']
+
+============================================================
+[10/10]
+
+[EU_0010] 'Feels wouldn't have time for dynamic therapy, needs short-te...'
+  Stage 1: Decomposing...
+  Stage 2: Mapping all frameworks in parallel...
+    ✓ broad_domains
+    ✓ snomed
+    ✓ stipo
+    ✓ bps_4p
+    ✓ f13fv
+    Disagreement on snomed — reconciling...
+
+────────────────────────────────────────────────────────────
+  EU_0010: Feels wouldn't have time for dynamic therapy, needs short-term help to function 
+────────────────────────────────────────────────────────────
+  [f13fv               ]  conf=0.78  ✓ agree
+    domains  : readiness_for_therapy, avoidance
+    rationale: Primary mapping to 'readiness_for_therapy' reflects the client's explicit treatment preference for brief, pragmatic inte
+    flags    : ['ambiguous_avoidance_vs_reality', 'treatment_modality_preference']
+  [broad_domains       ]  conf=0.82  ✓ agree
+    domains  : goals_and_priorities
+    rationale: This evidence unit directly addresses treatment goals and priorities: the client expresses a clear preference for short-
+    flags    : ['treatment_planning_relevant']
+  [bps_4p              ]  conf=0.80  ✓ agree
+    domains  : perpetuating_social, protective_psychological
+    rationale: The time constraint ('wouldn't have time for dynamic therapy') represents an external or perceived barrier that perpetua
+    flags    : ['treatment_planning_relevant', 'time_sensitive']
+  [stipo               ]  conf=0.55  ✓ agree
+    domains  : coping_and_rigidity
+    rationale: The evidence unit reflects how the individual anticipates and responds to therapeutic challenge—specifically, their stat
+    flags    : ['ambiguous', 'contextual_clarification_needed']
+  [snomed              ]  conf=0.00  △ reconciled
+    domains  : — none —
+    rationale: This evidence unit describes treatment preference and logistical constraints rather than clinical observations mappable 
+    recon    : Model B mapped to 'drive' domain interpreting the request for help as motivation/readiness for change. However, expressi

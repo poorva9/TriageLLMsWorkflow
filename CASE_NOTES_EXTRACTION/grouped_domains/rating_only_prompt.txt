@@ -1,0 +1,109 @@
+# Clinical EU Identifiability Rating Prompt
+
+---
+
+## TASK OVERVIEW
+
+You will process a CSV file of clinical evidence units (EUs). For each row you must:
+1. **Rate** the EvidenceText_Internal from 0–2 on identifiability
+2. Output a new CSV with all original columns preserved, the `Identifiability_Rating` column populated, and all EvidenceText_Internal values wrapped in double quotes
+
+---
+
+## STEP 1: READ THE FILE
+
+The CSV has these columns:
+`EvidenceType, RelevanceTier, EvidenceText_Internal, Domain_13FV, Domain_Broad, Domain_Framework, QuestionID, Section, Question, Identifiability_Rating`
+
+Process every row. Do not skip any.
+
+---
+
+## STEP 2: RATE EACH EU (0, 1, or 2)
+
+Ask: *If a patient read this EU — stripped of all proper nouns, names, and places — could they recognise it as being about themselves?*
+
+**AUTO-ESCALATE TO RATING 2: Immediate triggers**
+If any of the following appear anywhere in the EU, rate it 2 immediately — no further judgement needed:
+
+- Any number or quantity relating to people: "2 children", "5 siblings", "second brother", "third party", "both parents", "youngest of five"
+- Any number or quantity relating to time: "4 years", "6-7 years", "30 over years", "4-5 months", "5 hours a week", "every other week", "since 2016", any calendar year
+- Any number or quantity relating to pets: "4 deaths of pets", "male dog", breed names, exotic animal species
+- Any number or quantity relating to relationships: "3 past relationships", "partner of 2 years", "one year relationship"
+- Any number or quantity relating to outcomes or scores: "5/10", "19.8", "Total 16.8/40"
+- Any specific job title or rank: "sales director", "analyst", "manager", "secretarial", "working in a bank"
+- Any specific institution type with identifying context: "private institution", "residential facility", named school level combined with other details
+- Any specific financial or legal detail: "credit card", "borrowed money", "legal case"
+- Any unique event detail that few people would share: "funeral rites ultimatum", "hit previous pet", "discovered intimate acts via text messages"
+- Two or more compounding identity descriptors about the same person in one EU
+
+**Rating 0 — Generic**
+The EU describes a pattern, dynamic, or emotional state common to many people. Contains no specific quantities, dates, role counts, or unique events. No patient could single themselves out.
+Examples:
+- "Supportive family"
+- "Feeling underappreciated by friends"
+- "Tendency not to express herself with people she wants to be close to"
+- "Receives dismissive comments when confiding"
+- "Coping with family member's verbal abuse"
+- "Patient experienced bereavement of a family member"
+
+**Rating 1 — Somewhat specific**
+The EU contains contextual detail that adds colour but no auto-escalation triggers. A patient might recognise it as possibly about them but the detail alone is not uniquely identifying.
+Examples:
+- "Previous toxic friendship ended due to emotional bullying and competitive behaviour"
+- "Described work as erratic with strained relationships with supervisors"
+- "Family environment is non-accepting of patient's sexuality"
+- "Patient has not disclosed sexuality to family members"
+- "Partner's family disapproved of the relationship"
+
+**Rating 2 — Identifying**
+Any EU containing one or more auto-escalation triggers above, OR a combination of specific details that together form a uniquely recognisable narrative.
+Examples:
+- "Has gone through about 4 deaths of pets" → numeric count of pet deaths → auto-2
+- "Timeline of losses — family member passed in 2016, another family member passed suddenly in 2017, legal case in 2018" → calendar years + legal detail → auto-2
+- "Currently staying with girlfriend for 3-4 years, have been together for 6-7 years" → numeric durations → auto-2
+- "Youngest of five siblings with four older sisters" → specific sibling count → auto-2
+- "Widow with 2 children" → numeric count of children → auto-2
+- "Daughter working in a bank" → specific job context → auto-2
+- "Eldest sibling has cut off ties and told relatives will only be informed when patient or brother passes on to conduct funeral rites" → unique event → auto-2
+- "Patient identifies as having stronger attraction to females than males, family described as homophobic, no family members aware of patient's sexuality" → multiple compounding identity details → auto-2
+
+---
+
+## STEP 3: OUTPUT FORMAT
+
+Output a complete CSV with this column order:
+`EvidenceType, RelevanceTier, EvidenceText_Internal, Domain_13FV, Domain_Broad, Domain_Framework, QuestionID, Section, Question, Identifiability_Rating`
+
+Rules:
+- Output every input row as-is, with the Identifiability_Rating column populated
+- Do not add, remove, or reorder any rows
+- Do not modify any column values other than Identifiability_Rating
+- Always wrap the EvidenceText_Internal value in double quotes, even if it contains no commas — this prevents CSV parsing errors
+- Wrap any other cell containing commas in double quotes
+- The Identifiability_Rating column must contain only a single integer: 0, 1, or 2
+
+Output inside a code block:
+
+```csv
+EvidenceType,RelevanceTier,EvidenceText_Internal,Domain_13FV,Domain_Broad,Domain_Framework,QuestionID,Section,Question,Identifiability_Rating
+[rows here]
+```
+
+---
+
+## FULL EXAMPLE
+
+Input has 3 rows:
+1. "Supportive family"
+2. "Parent feels sad for patient, claimed patient was seemingly improving prior to other parent's passing"
+3. "Receives dismissive comments when confiding"
+
+Output:
+
+```csv
+EvidenceType,RelevanceTier,EvidenceText_Internal,Domain_13FV,Domain_Broad,Domain_Framework,QuestionID,Section,Question,Identifiability_Rating
+protective,CORE,"Supportive family",Social_support,Relationships_and_support,PROTECTIVE,Q10,Social Support & Relationships,Who provides you with emotional support?,0
+interpersonal,SUPPORTING,"Parent feels sad for patient, claimed patient was seemingly improving prior to other parent's passing",Social_support,Relationships_and_support,SOC,Q06,Social Support & Relationships,Who can you turn to for emotional support?,2
+interpersonal,CORE,"Receives dismissive comments when confiding",Social_support,Relationships_and_support,SOC,Q08,Social Support & Relationships,How would you describe your relationships?,0
+```

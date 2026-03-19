@@ -1,0 +1,25 @@
+EvidenceType,RelevanceTier,EvidenceText_Internal,Domain_13FV,Domain_Broad,Domain_Framework,QuestionID,Section,Question
+symptom,CORE,"Difficulties maintaining sleep, have been having terrible dreams",Sleep_issues,Sleep_and_energy,BIO,Q04,Sleep & Energy,How has your sleep been affected?
+symptom,CORE,Sleep pattern shows late bedtime and afternoon waking,Sleep_issues,Sleep_and_energy,BIO_x000D_,Q04,Sleep & Energy,How has your sleep been?
+symptom,CORE,"Still feeling very tired, attributes to lack of sleep discipline",Sleep_issues,Sleep_and_energy,BIO,Q04,Sleep & Energy,How has your sleep been?
+symptom,CORE,Fatigued during the day,Sleep_issues,Sleep_and_energy,BIO_x000D_,Q04,Sleep & Energy,How has your sleep been?
+sleep,CORE,Client shared that still wakes up late but acknowledges needs to begin waking up early as school reopens,Sleep_issues,Sleep_and_energy,BIO,Q05,Sleep & Energy,How has your sleep pattern been?
+therapy_process,SUPPORTING,Provided sleep hygiene education and explored social media use patterns,Sleep_issues,Sleep_and_energy,NONE_x000D_,Q04,Sleep & Energy,How has your sleep been?
+therapy_process,SUPPORTING,"As result of above changes, reported reduction in frequency of negative thoughts and able to fall asleep within 10-20 mins versus 1 hour previously",Sleep_issues,Sleep_and_energy,PSY_x000D_,Q04,Sleep & Energy,How has your sleep been?
+sleep,CORE,"During school holiday period, going to sleep at two to three am and waking up at one pm",Sleep_issues,Sleep_and_energy,BIO,Q05,Sleep & Energy,How has your sleep pattern been?
+symptom,CORE,Sleep difficulties with trouble falling asleep and morning waking,Sleep_issues,Sleep_and_energy,BIO_x000D_,Q04,Sleep & Energy,How has your sleep been?
+symptom,SUPPORTING,Generally sleeps well but occasional hourly wakening,Sleep_issues,Sleep_and_energy,BIO_x000D_,Q04,Sleep & Energy,How has your sleep been?
+symptom,CORE,Patient experiencing sleep difficulties due to peer conflict,Sleep_issues,Sleep_and_energy,BIO,Q03,Sleep & Energy,How has your sleep been affected?
+functioning,SUPPORTING,Appetite sleep ok,Sleep_issues,Sleep_and_energy,BIO,Q05,Sleep & Energy,How has your sleep and energy been?
+functioning,SUPPORTING,Generally still sleeps well eats well able to concentrate in his work still goes to gym daily to workout,Sleep_issues,Sleep_and_energy,BIO,Q05,Sleep & Energy,How has your sleep and energy been?
+symptom,CORE,"Difficulties waking up as feeling very tired No energy, needs 3-4 alarms clocks compared to 2 in the past",Sleep_issues,Sleep_and_energy,BIO,Q04,Sleep & Energy,How has your sleep been affected?
+symptom,CORE,"Poor quality sleep, reported frequent nightmares",Sleep_issues,Sleep_and_energy,BIO,Q04,Sleep & Energy,How has your sleep been affected?
+symptom,CORE,"Insomnia with sleep onset satisfactory but interrupted at 3-4 am, unable to return to sleep",Sleep_issues,Sleep_and_energy,BIO_x000D_,Q04,Sleep & Energy,How has your sleep been?
+symptom,CORE,"Goes to bed around 2-3am, plays games to help her sleep as a lot of energy going on",Sleep_issues,Sleep_and_energy,BIO,Q04,Sleep & Energy,How has your sleep been affected?
+preference,SUPPORTING,"Suggested seeing psychiatrist for medication review given persistent low energy, patient preferred to work on sleep improvement first",Sleep_issues,Sleep_and_energy,BIO,Q04,Sleep & Energy,How has your sleep been?
+barrier,SUPPORTING,Disrupted sleep pattern is reason that missed two sessions,Sleep_issues,Sleep_and_energy,BIO,Q05,Sleep & Energy,How has your sleep pattern been?
+symptom,CORE,Issues exacerbated by poor sleep patterns,Sleep_issues,Sleep_and_energy,BIO,Q05,Sleep & Energy,How has your sleep been affecting your overall wellbeing?
+functioning,CORE,"Beyond lunch break, feels so fatigued that blanks out for 30-60 mins mid-day",Sleep_issues,Sleep_and_energy,BIO_x000D_,Q04,Sleep & Energy,How has your sleep been?
+functioning,SUPPORTING,Sleep and appetite has not been affected,Sleep_issues,Sleep_and_energy,BIO,Q05,Sleep & Energy,How has your sleep and energy been?
+symptom,CORE,"Lethargy and insomnia, sleeps at 10pm but wakes between 3am to 5am, difficulty falling back asleep",Sleep_issues,Sleep_and_energy,BIO_x000D_,Q04,Sleep & Energy,How has your sleep been?
+symptom,CORE,"Disrupted sleep with nightmares, waking frequently but no difficulty initiating sleep",Sleep_issues,Sleep_and_energy,BIO,Q04,Sleep & Energy,How has your sleep been?

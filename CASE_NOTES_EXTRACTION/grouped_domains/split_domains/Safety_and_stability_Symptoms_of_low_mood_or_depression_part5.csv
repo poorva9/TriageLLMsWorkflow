@@ -1,0 +1,5 @@
+"EvidenceType","RelevanceTier","EvidenceText_Internal","Domain_13FV","Domain_Broad","Domain_Framework","QuestionID","Section","Question"
+"symptom","CORE","Patient reported past week as 'slightly worse', consistent with drop in outcome measure scores","Symptoms_of_low_mood_or_depression","Safety_and_stability","PSY","","",""
+"symptom","CORE","Random thoughts and memories about former partner come to mind","Symptoms_of_low_mood_or_depression","Safety_and_stability","PSY","Q02","Low Mood & Depression Symptoms","What depression or mood symptoms are you experiencing?"
+"symptom","CORE","Feelings of sadness, guilt, stress","Symptoms_of_low_mood_or_depression","Safety_and_stability","PSY","Q02","Low Mood & Depression Symptoms","What depression symptoms are you experiencing?"
+"symptom","CORE","Feelings of sadness, guilt, stress","Symptoms_of_low_mood_or_depression","Safety_and_stability","PSY","Q04","Stress & Overwhelm Response","What stressors are affecting your daily functioning?"
